@@ -185,12 +185,13 @@ const DoubleHeartMerge = ({ className }) => {
 
 /* ─────────────────────────── Envelope Screen ─────────────────────────── */
 
-const EnvelopeScreen = ({ onOpen, onPlayMusic }) => {
+const EnvelopeScreen = ({ onOpen, onPlayMusic, onDownload }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
     setIsOpen(true);
     if (onPlayMusic) onPlayMusic();
+    if (onDownload) onDownload();
     setTimeout(() => { onOpen(); }, 1500);
   };
 
@@ -294,7 +295,11 @@ function App() {
     const link = document.createElement('a');
     link.download = 'Nawazudin_Weds_Irfana_Invitation.jpeg';
     link.href = '/nikkah.jpeg';
+    // Append to body to ensure the click works in all browsers
+    document.body.appendChild(link);
     link.click();
+    // Clean up
+    document.body.removeChild(link);
   };
 
   const handleHeartButtonClick = () => {
@@ -352,7 +357,7 @@ function App() {
     <div className="bg-[#FFF8F0] min-h-screen text-[#3A2E28] font-sans relative overflow-x-hidden z-10">
       <AnimatePresence>
         {showEnvelope && (
-          <EnvelopeScreen onOpen={() => setShowEnvelope(false)} onPlayMusic={startMusic} />
+          <EnvelopeScreen onOpen={() => setShowEnvelope(false)} onPlayMusic={startMusic} onDownload={triggerDownload} />
         )}
       </AnimatePresence>
 
