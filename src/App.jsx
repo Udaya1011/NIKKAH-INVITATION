@@ -293,8 +293,8 @@ function App() {
 
   const triggerDownload = () => {
     const link = document.createElement('a');
-    link.download = 'Nawazudin_Weds_Irfana_Invitation.jpeg';
-    link.href = '/nikkah.jpeg';
+    link.download = 'Navasdeen_Weds_Irfana_Invitation.png';
+    link.href = '/nikkah.png';
     // Append to body to ensure the click works in all browsers
     document.body.appendChild(link);
     link.click();
@@ -309,7 +309,7 @@ function App() {
   };
 
   const calendarEvent = {
-    title: 'Muhammad Nawazudin & Irfana Begam — Nikkah',
+    title: 'Mohamed Navasdeen & Irfana Begam — Nikkah',
     details: 'Nikkah Ceremony at MSJM Mahal, Mangalam, Tiruppur',
     location: 'MSJM Mahal, Mangalam, Tiruppur',
     start: '20260628T060000Z',
@@ -519,7 +519,7 @@ function App() {
             <div className="w-full h-full relative overflow-hidden rounded-t-full">
               <img
                 src="/hero.jpg"
-                alt="Muhammad Nawazudin & Irfana Begam"
+                alt="Mohamed Navasdeen & Irfana Begam"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FFF8F0]/30 via-transparent to-transparent pointer-events-none" />
@@ -534,7 +534,7 @@ function App() {
             className="text-center flex flex-col items-center"
           >
             <h1 className="text-3xl md:text-5xl font-serif leading-none tracking-tight flex flex-col items-center mb-2">
-              <span className="text-gold-gradient inline-block px-4 pb-2">Muhammad Nawazudin</span>
+              <span className="text-gold-gradient inline-block px-4 pb-2">Mohamed Navasdeen</span>
               <motion.div
                 animate={{
                   y: [0, -6, 0],
@@ -738,7 +738,7 @@ function App() {
               const message = encodeURIComponent(
                 `✧ *NIKKAH CEREMONY INVITATION* ✧\n` +
                 `━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
-                `*Muhammad Nawazudin*\n` +
+                `*Mohamed Navasdeen*\n` +
                 `&\n` +
                 `*Irfana Begam*\n\n` +
                 `*View Web Invitation:* ${window.location.href}\n\n` +
@@ -758,7 +758,7 @@ function App() {
       <footer className="py-12 text-center relative overflow-hidden">
         <FloralDivider />
         <p className="text-[#6B5B52] text-[10px] tracking-[0.3em] uppercase mt-4">
-          Muhammad Nawazudin & Irfana Begam
+          Mohamed Navasdeen & Irfana Begam
         </p>
         <p className="text-[#C4A08A] text-[9px] tracking-[0.2em] mt-2">28 June 2026</p>
       </footer>
